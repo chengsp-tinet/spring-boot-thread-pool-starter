@@ -52,7 +52,7 @@
           "value": "DiscardOldestPolicy"
         }
       ],
-      "name": "spring.thread.pool.reject-strategy",
+      "name": "spring.thread.pool.reject-strategy"
     }
 
   ]
