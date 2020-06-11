@@ -82,7 +82,7 @@ public class ThreadPoolAutoConfiguration {
                 }
                 rejectedExecutionHandler = ((RejectedExecutionHandler) rejectStrategyBean);
             } else {
-                rejectedExecutionHandler = new ThreadPoolExecutor.AbortPolicy();
+                rejectedExecutionHandler = new ThreadPoolExecutor.CallerRunsPolicy();
             }
         } else {
             if (!REJECTED_EXECUTION_HANDLER_MAP.containsKey(rejectStrategy)) {
@@ -93,11 +93,11 @@ public class ThreadPoolAutoConfiguration {
 
         }
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, unit,
-                new LinkedBlockingDeque<>(queueSize), threadFactory, rejectedExecutionHandler);
+                new LinkedBlockingQueue<>(queueSize), threadFactory, rejectedExecutionHandler);
         log.info("globalConfig:{}", globalConfig);
         log.info("线程池配置成功:{}", threadPoolExecutor);
         return threadPoolExecutor;
     }
 
-    private static final ThreadFactory DEFAULT_THREAD_FACTORY = r -> new Thread();
+        private static final ThreadFactory DEFAULT_THREAD_FACTORY = Thread::new;
 }
