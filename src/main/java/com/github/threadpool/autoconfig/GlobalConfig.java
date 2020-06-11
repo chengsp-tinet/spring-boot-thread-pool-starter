@@ -1,13 +1,8 @@
 package com.github.threadpool.autoconfig;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  * 全局配置
