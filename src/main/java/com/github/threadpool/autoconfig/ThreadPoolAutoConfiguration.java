@@ -10,11 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * 自动配置线程池
