@@ -1,0 +1,59 @@
+{
+  "hints": [
+    {
+      "name": "spring.thread.pool.enabled",
+      "values": [
+        {
+          "value": true
+        },
+        {
+          "value": false
+        }
+      ]
+    },
+    {
+      "values": [
+        {
+          "value": "nanoseconds"
+        },
+        {
+          "value": "microseconds"
+        },
+        {
+          "value": "milliseconds"
+        },
+        {
+          "value": "seconds"
+        },
+        {
+          "value": "minutes"
+        },
+        {
+          "value": "hours"
+        },
+        {
+          "value": "days"
+        }
+      ],
+      "name": "spring.thread.pool.time-unit"
+    },
+    {
+      "values": [
+        {
+          "value": "CallerRunsPolicy"
+        },
+        {
+          "value": "AbortPolicy"
+        },
+        {
+          "value": "DiscardPolicy"
+        },
+        {
+          "value": "DiscardOldestPolicy"
+        }
+      ],
+      "name": "spring.thread.pool.reject-strategy",
+    }
+
+  ]
+}
